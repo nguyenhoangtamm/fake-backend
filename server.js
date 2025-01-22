@@ -56,27 +56,27 @@ async function createSession(userId) {
 // RESTful API routes for "todos"
 server.use(async (req, res, next) => {
   const token = req.headers.authorization?.split(' ')[1];
+  console.log('Token:', token);
   if (token) {
     const payload = await decrypt(token);
+    console.log('Payload:', payload);
     if (payload) {
       req.userId = payload.userId;
+      console.log('User ID:', req.userId);
     }
+
   }
   next();
 });
 
-server.get('/todos/user/:userid', (req, res) => {
-  if (req.userId !== parseInt(req.params.userid)) {
-    return res.status(403).json({ message: 'Forbidden' });
-  }
+server.get('/todos/user', (req, res) => {
+ 
   const todos = router.db.get('todos').filter({ userid: req.userId }).value();
   res.status(200).json(todos);
 });
 
-server.get('/todos/user/:userid/:id', (req, res) => {
-  if (req.userId !== parseInt(req.params.userid)) {
-    return res.status(403).json({ message: 'Forbidden' });
-  }
+server.get('/todos/user/:id', (req, res) => {
+ 
   const todo = router.db.get('todos').find({ id: parseInt(req.params.id), userid: req.userId }).value();
   if (todo) {
     res.status(200).json(todo);
@@ -85,19 +85,15 @@ server.get('/todos/user/:userid/:id', (req, res) => {
   }
 });
 
-server.post('/todos/user/:userid', (req, res) => {
-  if (req.userId !== parseInt(req.params.userid)) {
-    return res.status(403).json({ message: 'Forbidden' });
-  }
+server.post('/todos/user', (req, res) => {
+ 
   const newTodo = { ...req.body, userid: req.userId };
   router.db.get('todos').push(newTodo).write();
   res.status(201).json(newTodo);
 });
 
-server.put('/todos/user/:userid/:id', (req, res) => {
-  if (req.userId !== parseInt(req.params.userid)) {
-    return res.status(403).json({ message: 'Forbidden' });
-  }
+server.put('/todos/user/:id', (req, res) => {
+ 
   const updatedTodo = req.body;
   const todo = router.db.get('todos').find({ id: parseInt(req.params.id), userid: req.userId }).assign(updatedTodo).write();
   if (todo) {
@@ -107,10 +103,8 @@ server.put('/todos/user/:userid/:id', (req, res) => {
   }
 });
 
-server.delete('/todos/user/:userid/:id', (req, res) => {
-  if (req.userId !== parseInt(req.params.userid)) {
-    return res.status(403).json({ message: 'Forbidden' });
-  }
+server.delete('/todos/user/:id', (req, res) => {
+ 
   const todo = router.db.get('todos').remove({ id: parseInt(req.params.id), userid: req.userId }).write();
   if (todo.length > 0) {
     res.status(200).json({ message: 'Todo deleted' });
