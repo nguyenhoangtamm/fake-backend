@@ -1,34 +1,106 @@
 {
-  "blogs": [
+  "todos": [
+    {
+      "userid": 3,
+      "id": 1,
+      "title": "Buy groceries",
+      "taskType": "Task",
+      "dateTime": "2025-01-12T22:30",
+      "description": "Buy milk, bread, and eggs from the supermarket.",
+      "category": "Khác"
+    },
+    {
+      "userid": 3,
+      "id": 2,
+      "title": "Finish project report",
+      "taskType": "Task",
+      "dateTime": "2025-01-12T22:30",
+      "description": "Complete the final report for the XYZ project.",
+      "category": "Khác"
+    },
+    {
+      "userid": 3,
+      "id": 3,
+      "title": "Doctor appointment",
+      "taskType": "Task",
+      "dateTime": "2025-01-12T22:30",
+      "description": "Visit Dr. Smith for the annual check-up.",
+      "category": "Khác"
+    },
+    {
+      "userid": 3,
+      "id": 4,
+      "title": "Team meeting",
+      "taskType": "Task",
+      "dateTime": "2025-01-12T22:30",
+      "description": "Attend the weekly team meeting to discuss project updates.",
+      "category": "Khác"
+    },
+    {
+      "userid": 3,
+      "id": 5,
+      "title": "Gym session",
+      "taskType": "Task",
+      "dateTime": "2025-01-12T22:30",
+      "description": "Go to the gym for a workout session.",
+      "category": "Khác"
+    },
+    {
+      "title": "Làm bài tập toán văn",
+      "taskType": "Task",
+      "dateTime": "2025-01-01T13:01",
+      "category": "Học tập",
+      "description": "1+1=??",
+      "userid": 3,
+      "id": 9
+    },
+    {
+      "title": "Nấu ăn",
+      "taskType": "Task",
+      "dateTime": "2025-01-12T22:30",
+      "category": "Việc cần làm của tôi",
+      "description": "Nấu mì",
+      "userid": 3,
+      "id": 10
+    },
+    {
+      "title": "choihoi",
+      "taskType": "Event",
+      "dateTime": "2025-01-12T22:30",
+      "category": "Khác",
+      "description": "hhhhh",
+      "userid": 3,
+      "id": 11
+    },
+    {
+      "title": "12",
+      "taskType": "Task",
+      "dateTime": "2025-01-12T22:30",
+      "category": "Việc cần làm của tôi",
+      "description": "ád",
+      "userid": 3,
+      "id": 12
+    }
+  ]
+  ,
+  "users": [
     {
       "id": 1,
-      "title": "What is Lorem Ipsum?",
-      "author": "Eric",
-      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin"
     },
     {
-      "id": 2,
-      "title": "Why do we use it?",
-      "author": "Eric",
-      "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+      "name": "tam",
+      "email": "tam1@gmail.com",
+      "password": "1h1hh2h3123123k12",
+      "id": 2
     },
     {
-      "id": 3,
-      "title": "Where does it come from?",
-      "author": "Eric",
-      "content": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,comes from a line in section 1.10.32."
-    },
-    {
-      "id": 4,
-      "title": "Why do we use it?",
-      "author": "Eric",
-      "content": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
-    },
-    {
-      "id": 5,
-      "title": "Where can I get some?",
-      "author": "Eric",
-      "content": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc."
+      "name": "tam",
+      "email": "tam@gmail.com",
+      "password": "1234",
+      "id": 3
     }
   ]
 }
